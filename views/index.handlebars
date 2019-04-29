@@ -5,8 +5,7 @@
 <ul>
     {{#each burgers}}
         {{#unless devoured}}
-            <p>
-                {{this.burger_name}}
+            <p>{{this.id}}. {{this.burger_name}}
     {{!-- {{> burgers/cat-block sleep=true}} --}}
         {{/unless}}
     {{/each}}
@@ -17,19 +16,18 @@
 <ul>
     {{#each burgers}}
     {{#if devoured}}
-            <p>
-                {{this.burger_name}}
+            <p>{{this.id}}. {{this.burger_name}}
     {{!-- {{> cats/cat-block sleep=false}} --}}
     {{/if}}
     {{/each}}
 </ul>
 
-<h2>Add a Burger</h2>
+<h2>Hungry for more?</h2>
 <form class="create-form">
 
     <div class="form-group">
-        <label for="NewBurger">Name:</label>
-        <input type="text" id="ca" name="name">
+        <label for="newBurger">Name:</label>
+        <input type="text" id="newBurger" name="name">
     </div>
 
     <div class="form-group">
