@@ -6,7 +6,10 @@
     {{#each burgers}}
         {{#unless devoured}}
             <p>{{this.id}}. {{this.burger_name}}
-    {{!-- {{#> /partials/cat-block devoured=false}} --}}
+              	<button class="change-sleep" data-id="{{this.id}}" data-newsleep="{{this.devoured}}">
+		{{#if devoured}}GEEZ I WANT ANOTHER ONE!{{else}}EAT THIS!{{/if}}
+	</button>
+  	<button class="delete-cat" data-id="{{this.id}}">DELETE!</button>
         {{/unless}}
     {{/each}}
 </ul>
@@ -17,7 +20,10 @@
     {{#each burgers}}
     {{#if devoured}}
             <p>{{this.id}}. {{this.burger_name}}
-    {{!-- {{#> /partials/cat-block devoured=true}} --}}
+              	<button class="change-sleep" data-id="{{this.id}}" data-newsleep="{{this.devoured}}">
+		{{#if devoured}}GEEZ I WANT ANOTHER ONE!{{else}}EAT THIS!{{/if}}
+	</button>
+  	<button class="delete-cat" data-id="{{this.id}}">DELETE!</button>
     {{/if}}
     {{/each}}
 </ul>
@@ -34,8 +40,8 @@
 
   <div class="form-group">
     <label for="sleepy">Already Eaten?</label><br>
-    <input type="radio" name="sleepy" value="0"> Devoured<br>
-    <input type="radio" name="sleepy" value="1"  checked> Ready to Eat
+    <input type="radio" name="sleepy" value="1"> Devoured<br>
+    <input type="radio" name="sleepy" value="0" checked> Ready to Eat
   </div>
 
   <button type="submit">Add Me Some Burger!</button>

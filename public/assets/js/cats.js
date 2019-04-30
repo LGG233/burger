@@ -1,13 +1,18 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
   $(".change-sleep").on("click", function(event) {
-    console.log("Submit button")
     var id = $(this).data("id");
-    var newSleep = $(this).data("newsleep");
-
+    if ($(this).data("newsleep") === 0) {
+      var newSleep = 1;
+    } else {
+      var newSleep = 0;
+    }
+    // var newSleep = $(this).data("newsleep");
     var newSleepState = {
-      sleepy: newSleep
+      devoured: newSleep
     };
+    console.log(newSleep);
+    console.log("devoured: " + $(this).data("newsleep"));
 
     // Send the PUT request.
     $.ajax("/api/cats/" + id, {
