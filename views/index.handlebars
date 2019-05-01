@@ -1,48 +1,63 @@
-<h1>Eat-Da-Burger!</h1>
+{{!-- <div class="jumbotron"> --}}
+  <h1 class="top-name text">Eat-Da-Burger!</h1>
+  <br>
+{{!-- </div> --}}
 
-<h2>Burgers that make you drool!</h2>
-
-<ul>
-    {{#each burgers}}
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <h2 class="menu-header text">On The Menu!</h2>
+      <ul>
+        {{#each burgers}}
         {{#unless devoured}}
-            <p>{{this.id}}. {{this.burger_name}}
-              	<button class="change-sleep" data-id="{{this.id}}" data-newsleep="{{this.devoured}}">
-		{{#if devoured}}GEEZ I WANT ANOTHER ONE!{{else}}EAT THIS!{{/if}}
-	</button>
-  	<button class="delete-cat" data-id="{{this.id}}">DELETE!</button>
-        {{/unless}}
-    {{/each}}
-</ul>
+        <p class="big text">{{this.id}}. {{this.burger_name}}
+          <button type="button" class="change-sleep btn btn-primary btn-sm" data-id="{{this.id}}"
+            data-newsleep="{{this.devoured}}">
+            {{#if devoured}}More, please!{{else}}Time to eat!{{/if}}
+          </button>
+          <button type="button" class="delete-cat btn btn-primary btn-sm" data-id="{{this.id}}">Delete this!</button>
+          {{/unless}}
+          {{/each}}
+      </ul>
+    </div>
+    <div class="col-lg-6">
+      <h2 class="menu-header text">In Your Belly!</h2>
 
-<h2>Burgers you've already devoured!</h2>
-
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-            <p>{{this.id}}. {{this.burger_name}}
-              	<button class="change-sleep" data-id="{{this.id}}" data-newsleep="{{this.devoured}}">
-		{{#if devoured}}GEEZ I WANT ANOTHER ONE!{{else}}EAT THIS!{{/if}}
-	</button>
-  	<button class="delete-cat" data-id="{{this.id}}">DELETE!</button>
-    {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Hungry for more?</h2>
-<form class="create-form">
-
-<form class="create-form">
-
-  <div class="form-group">
-    <label for="ca">Burger Name:</label>
-    <input type="text" id="ca" name="name">
+      <ul>
+        {{#each burgers}}
+        {{#if devoured}}
+        <p class="big text">{{this.id}}. {{this.burger_name}}
+          <button type="button" class="change-sleep btn btn-primary btn-sm" data-id="{{this.id}}"
+            data-newsleep="{{this.devoured}}">
+            {{#if devoured}}More, please!{{else}}Time to eat!{{/if}}
+          </button>
+          <button type="button" class="delete-cat btn btn-primary btn-sm" data-id="{{this.id}}">Delete this!</button>
+          {{/if}}
+          {{/each}}
+      </ul>
+    </div>
   </div>
+</div>
+<br>
+<div class="container">
+  <div class="row"></div>
+  <div class="row">
+    <div class="col-lg-6">
+      <h2 class="menu-header text">Looking for Something Else?</h2>
+      <form class="create-form">
 
-  <div class="form-group">
-    <label for="sleepy">Already Eaten?</label><br>
-    <input type="radio" name="sleepy" value="1"> Devoured<br>
-    <input type="radio" name="sleepy" value="0" checked> Ready to Eat
+        <div class="form-group text big">
+          <label for="ca">Burger Name:</label>
+          <input type="text" id="ca" name="name">
+        </div>
+        <div class="form-group text big">
+          {{!-- <label for="sleepy">Already Eaten?</label><br> --}}
+          <input type="radio" name="sleepy" value="0" checked> Put it on the menu!
+          <input type="radio" name="sleepy" value="1"> I just ate one!<br>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-sm">Add Me Some Burger!</button>
+      </form>
+    </div>
   </div>
-
-  <button type="submit">Add Me Some Burger!</button>
-</form>
+</div>
