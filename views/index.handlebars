@@ -10,10 +10,10 @@
       <ul>
         {{#each burgers}}
         {{#unless devoured}}
-        <p class="big text">{{this.id}}. {{this.burger_name}}
+        <p class="big text">{{this.id}}. {{this.burger_name}}<br>
           <button type="button" class="change-sleep btn btn-primary btn-sm" data-id="{{this.id}}"
             data-newsleep="{{this.devoured}}">
-            {{#if devoured}}More, please!{{else}}Time to eat!{{/if}}
+            {{#if devoured}}More, please!{{else}}Let's eat!{{/if}}
           </button>
           <button type="button" class="delete-cat btn btn-primary btn-sm" data-id="{{this.id}}">Delete this!</button>
           {{/unless}}
@@ -26,10 +26,10 @@
       <ul>
         {{#each burgers}}
         {{#if devoured}}
-        <p class="big text">{{this.id}}. {{this.burger_name}}
+        <p class="big text">{{this.id}}. {{this.burger_name}}<br>
           <button type="button" class="change-sleep btn btn-primary btn-sm" data-id="{{this.id}}"
             data-newsleep="{{this.devoured}}">
-            {{#if devoured}}More, please!{{else}}Time to eat!{{/if}}
+            {{#if devoured}}More, please!{{else}}Let's eat!{{/if}}
           </button>
           <button type="button" class="delete-cat btn btn-primary btn-sm" data-id="{{this.id}}">Delete this!</button>
           {{/if}}
