@@ -19,27 +19,23 @@ li {
 }
 
 .text {
-  color: #ffff;
+  color: whitesmoke;
   text-emphasis: bold;
+  text-shadow: 2px 2px black;
 }
 .top-name {
-  text-shadow: 2px 2px black;
   text-align: center;
   font-size: 64px;
 }
 .big {
-  text-shadow: 2px 2px black;
   font-size: 24px;
 }
 
 .menu-header {
-  text-shadow: 2px 2px black;
   font-size: 32px;
 }
 
 body {
   background-image: url(../img/burger.jpg);
   background-size: cover;
-
-    /* background-color: #cccccc; */
  }

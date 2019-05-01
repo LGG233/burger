@@ -7,7 +7,6 @@ $(function() {
     } else {
       var newSleep = 0;
     }
-    // var newSleep = $(this).data("newsleep");
     var newSleepState = {
       devoured: newSleep
     };
@@ -35,7 +34,6 @@ $(function() {
       burger_name: $("#ca").val().trim(),
       devoured: $("[name=sleepy]:checked").val().trim()
     };
-
     // Send the POST request.
     $.ajax("/api/cats", {
       type: "POST",
@@ -51,7 +49,6 @@ $(function() {
 
   $(".delete-cat").on("click", function(event) {
     var id = $(this).data("id");
-
     // Send the DELETE request.
     $.ajax("/api/cats/" + id, {
       type: "DELETE"

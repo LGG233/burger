@@ -1,8 +1,5 @@
-{{!-- <div class="jumbotron"> --}}
-  <h1 class="top-name text">Eat-Da-Burger!</h1>
-  <br>
-{{!-- </div> --}}
-
+<h1 class="top-name text">Eat-Da-Burger!</h1>
+<br>
 <div class="container">
   <div class="row">
     <div class="col-lg-6">
@@ -15,14 +12,13 @@
             data-newsleep="{{this.devoured}}">
             {{#if devoured}}More, please!{{else}}Let's eat!{{/if}}
           </button>
-          <button type="button" class="delete-cat btn btn-primary btn-sm" data-id="{{this.id}}">Delete this!</button>
+          <button type="button" class="delete-cat btn btn-primary btn-sm" data-id="{{this.id}}">Delete</button>
           {{/unless}}
           {{/each}}
       </ul>
     </div>
     <div class="col-lg-6">
       <h2 class="menu-header text">In Your Belly!</h2>
-
       <ul>
         {{#each burgers}}
         {{#if devoured}}
@@ -31,7 +27,7 @@
             data-newsleep="{{this.devoured}}">
             {{#if devoured}}More, please!{{else}}Let's eat!{{/if}}
           </button>
-          <button type="button" class="delete-cat btn btn-primary btn-sm" data-id="{{this.id}}">Delete this!</button>
+          <button type="button" class="delete-cat btn btn-primary btn-sm" data-id="{{this.id}}">Delete</button>
           {{/if}}
           {{/each}}
       </ul>
@@ -45,17 +41,14 @@
     <div class="col-lg-6">
       <h2 class="menu-header text">Looking for Something Else?</h2>
       <form class="create-form">
-
         <div class="form-group text big">
           <label for="ca">Burger Name:</label>
           <input type="text" id="ca" name="name">
         </div>
         <div class="form-group text big">
-          {{!-- <label for="sleepy">Already Eaten?</label><br> --}}
           <input type="radio" name="sleepy" value="0" checked> Put it on the menu!
           <input type="radio" name="sleepy" value="1"> I just ate one!<br>
         </div>
-
         <button type="submit" class="btn btn-primary btn-sm">Add Me Some Burger!</button>
       </form>
     </div>
