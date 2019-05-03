@@ -37,8 +37,6 @@ $(function () {
             data: newSleepState
         }).then(
             function () {
-                console.log("changed sleep to", newSleep);
-                // Reload the page to get the updated list
                 location.reload();
             }
         );
